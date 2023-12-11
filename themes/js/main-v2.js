@@ -1,7 +1,7 @@
 const redirectToSearch = () => {
   const inputValue = document.getElementById("txt-url").value;
   const encodedValue = encodeURIComponent(inputValue);
-  window.location.href = `search/${encodedValue}`;
+  window.location.href = `search?result=${encodedValue}`;
 };
 
 const getSearchQuery = () => {
