@@ -186,6 +186,7 @@
               type="button"
               class="navbar-toggle collapsed pull-right"
               data-toggle="collapse"
+              id="btn-menu"
               data-target="#global-nav"
             >
               <span class="sr-only">Y2Mate.com</span>
@@ -541,13 +542,6 @@
               <p>
                 <a
                   class="footer-list-link"
-                  href="https://newy2mate.github.io/y2mate"
-                  >Youtube Downloader</a
-                >
-              </p>
-              <p>
-                <a
-                  class="footer-list-link"
                   href="https://newy2mate.github.io/y2mate/youtube-to-mp3"
                   >Youtube to MP3 Converter</a
                 >
@@ -614,6 +608,19 @@
         if (!event.target.closest(".dropdown")) {
           dropdownMenu.classList.remove("open");
         }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnMenu = document.getElementById("btn-menu");
+        var btnNavMenu = document.getElementById("global-nav");
+        btnMenu.addEventListener("click", function () {
+          btnMenu.classList.remove("collapsed");
+          var isNavMenuCollapsed = btnNavMenu.classList.contains("in");
+          if (isNavMenuCollapsed) {
+            btnNavMenu.classList.remove("in");
+          } else {
+            btnNavMenu.classList.add("in");
+          }
+        });
       });
     </script>
     <script
