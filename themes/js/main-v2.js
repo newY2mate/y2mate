@@ -40,11 +40,11 @@ const displayResults = (data) => {
     colDiv.className = "col-xs-6 col-sm-4 col-md-3";
     colDiv.innerHTML = `
           <div class="thumbnail">
-            <a href="download.html?result=${video.videoId}" target="_blank">
+            <a href="download?result=${video.videoId}">
               <img class="lazyload ythumbnail" alt="${video.title}" src="${video.imgSrc}" data-src="${video.imgSrc}">
             </a>
             <div class="search-info">
-              <a href="download.html?result=${video.videoId}">${video.title}</a><br>
+              <a href="download?result=${video.videoId}">${video.title}</a><br>
             </div>
           </div>
         `;
@@ -67,9 +67,11 @@ const downloadVideo = (videoId) => {
   const iframe = document.createElement("iframe");
   iframe.src = downloadUrl;
   iframe.width = "100%";
-  iframe.height = "100%";
+  iframe.height = "900px";
   iframe.allowtransparency = "true";
   iframe.scrolling = "yes";
+  iframe.sandbox =
+    "allow-scripts allow-same-origin allow-presentation allow-downloads allow-forms";
   iframe.style.border = "none";
 
   const resultContainer = document.getElementById("data");
