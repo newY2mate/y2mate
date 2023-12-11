@@ -1,16 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Download Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>
+      YouTube Downloader - Download YouTube videos in MP3, MP4, 3GP | Y2mate.com
+    </title>
+    <meta
+      name="description"
+      content="Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta itemprop="name" content="Download Video and Audio from YouTube" />
+    <meta
+      itemprop="description"
+      content="Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A"
+    />
+    <meta
+      itemprop="image"
+      content="https://newy2mate.github.io/y2mate/themes/images/256x256.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Download Video and Audio from YouTube" />
+    <meta
+      property="og:description"
+      content="Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A"
+    />
+    <meta
+      property="og:image"
+      content="https://newy2mate.github.io/y2mate/themes/images/256x256.png"
+    />
+    <link rel="canonical" href="https://newy2mate.github.io/y2mate/download" />
+    <link
+      rel="icon"
+      href="https://newy2mate.github.io/y2mate/themes/images/logo.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://newy2mate.github.io/y2mate/themes/bootstrap/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://newy2mate.github.io/y2mate/themes/css/style.css"
+    />
   </head>
-  <body>
-    <h2>Download Page</h2>
-
-    <div id="data"></div>
-
+  <body id="bootstrap-themes" class="swag-line">
+    <div class="container-overflow-wrap">
+      <nav class="navbar navbar-tall navbar-full" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="navbar-brand logo-cont">
+              <a
+                class
+                href="https://newy2mate.github.io/y2mate"
+                style="padding: 0"
+              >
+                <img
+                  height="46px"
+                  width="46px"
+                  src="https://newy2mate.github.io/y2mate/themes/images/logo.png"
+                  alt="Logo y2mate.com"
+                  style="height: 46px"
+                />
+                <span id="logo-name"> y2mate </span>
+              </a>
+            </div>
+            <button
+              type="button"
+              class="navbar-toggle collapsed pull-right"
+              data-toggle="collapse"
+              id="btn-menu"
+              data-target="#global-nav"
+            >
+              <span class="sr-only">Y2Mate.com</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse p-l-0 p-r-0" id="global-nav">
+            <div class="navbar-right m-r-0">
+              <ul class="nav navbar-nav m-r-0 m-l-0">
+                <li>
+                  <a href="https://newy2mate.github.io/y2mate/youtube-to-mp3"
+                    >YouTube to mp3 Converter</a
+                  >
+                </li>
+                <li>
+                  <a href="https://newy2mate.github.io/y2mate/youtube-to-mp4"
+                    >YouTube to MP4</a
+                  >
+                </li>
+                <li class="dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >English <span class="caret"></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div style="clear: both">
+        <div>
+          <div class="container">
+            <div class="panel panel-default m-b-0">
+              <div class="panel-body">
+                <div class="div-form">
+                  <div class="hero hero-homepage">
+                    <h1 class="hero-header">
+                      Download Video and Audio from YouTube
+                    </h1>
+                    <div>
+                      <form
+                        class="form-inline form-search"
+                        action="https://newy2mate.github.io/y2mate/search"
+                        id="search-form"
+                        name="mc-embedded-subscribe-form"
+                      >
+                        <input
+                          class="form-control input-lg"
+                          value
+                          id="txt-url"
+                          name="result"
+                          type="text"
+                          placeholder="Search or paste link here..."
+                        />
+                        <button
+                          title="Start"
+                          type="button"
+                          value="Start"
+                          id="btn-submit"
+                          class="btn btn-lg"
+                          onclick="redirectToSearch();"
+                        >
+                          <span class="hidden-xs">Start </span>
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </button>
+                        <div id="result-suggest-container"></div>
+                        <p class="small">
+                          By using our service you are accepting our
+                          <a
+                            class="active"
+                            href="https://newy2mate.github.io/y2mate/terms-of-service"
+                            target="_blank"
+                            >Terms of Use</a
+                          >.
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="data"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-padded row-bordered row-centered p-l-md p-r-md">
+              <div class="col-sm-12">
+                <div class="text-center">
+                  <h2><strong>YouTube Video Downloader</strong></h2>
+                  <p>
+                    Y2mate allows you to convert & download video from YouTube,
+                    Facebook, Video, Dailymotion, Youku, etc. to Mp3, Mp4 in HD
+                    quality. Y2mate supports downloading all video formats such
+                    as: MP4, M4V, 3GP, WMV, FLV, MO, MP3, WEBM, etc. You can
+                    easily download for free thousands of videos from YouTube
+                    and other websites.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row row-padded row-bordered homepage-grid text-center p-l-md p-r-md"
+            >
+              <div class="col-xs-12 col-sm-7 text-left">
+                <h5><strong>Instructions</strong></h5>
+                <p>
+                  1. Search by name or directly paste the link of video you want
+                  to convert
+                </p>
+                <p>2. Click "Start" button to begin converting process</p>
+                <p>
+                  3. Select the video/audio format you want to download, then
+                  click "Download" button
+                </p>
+              </div>
+              <div class="col-xs-12 col-sm-5 text-left">
+                <h5><strong>Features</strong></h5>
+                <p>• Unlimited downloads and always free</p>
+                <p>• High-speed video converter</p>
+                <p>• No registration required</p>
+                <p>• Support downloading with all formats</p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div
+              class="row row-padded row-bordered homepage-grid text-center p-l-md p-r-md featured"
+            >
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-gift" aria-hidden="true">
+                </span>
+                <h3><strong>Free Download</strong></h3>
+                <h4>Unlimited conversion and free download.</h4>
+              </div>
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-film" aria-hidden="true">
+                </span>
+                <h3><strong>Video & Audio</strong></h3>
+                <h4>Directly Download Video & Music.</h4>
+              </div>
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-saved" aria-hidden="true">
+                </span>
+                <h3><strong>Easy Download</strong></h3>
+                <h4>Fully compatible with all browsers.</h4>
+              </div>
+            </div>
+            <div
+              class="row row-padded homepage-grid text-center m-t p-l-md p-r-md"
+            >
+              <div class="col-md-12">
+                <div class="box-guide text-left">
+                  <p>
+                    <b>Tip:</b> Insert "<b>pp</b>" after the word "youtube" in
+                    the link to download videos and mp3 files from YouTube as a
+                    faster way.
+                  </p>
+                  <p>
+                    <img
+                      alt="tip how to quick download youtube video mp3"
+                      height="100%"
+                      style="max-width: 100%"
+                      src="https://newy2mate.github.io/y2mate/themes/images/tip-download-youtube.jpg"
+                    />
+                  </p>
+                  <div>
+                    <div class="box-guide text-left">
+                      <p>
+                        If you can’t directly download video to your PC, please
+                        follow the guidelines below:
+                      </p>
+                      <p>
+                        Step1: Select the format you want and click "Download"
+                        button.
+                      </p>
+                      <p>
+                        Step2: In new window, press "CTRL + S" to save video OR
+                        right click to video, then select "Save as Video".
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer clearfix footer-borderless">
+        <p>@ 2016 - 2023 y2mate.com</p>
+        <div class="container">
+          <div class="row p-l-md p-r-md">
+            <div class="col-md-4">
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate"
+                  >Y2mate</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/youtube-to-mp3"
+                  >Youtube to MP3 Converter</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/youtube-to-mp4"
+                  >Youtube to MP4</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/about-us"
+                  >About</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/faq"
+                  >FAQ</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/contact-us"
+                  >Contact</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/terms-of-service"
+                  >Terms of Service</a
+                >
+              </p>
+              <p>
+                <a
+                  class="footer-list-link"
+                  href="https://newy2mate.github.io/y2mate/privacy-policy"
+                  >Privacy Policy</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnMenu = document.getElementById("btn-menu");
+        var btnNavMenu = document.getElementById("global-nav");
+        btnMenu.addEventListener("click", function () {
+          btnMenu.classList.remove("collapsed");
+          var isNavMenuCollapsed = btnNavMenu.classList.contains("in");
+          if (isNavMenuCollapsed) {
+            btnNavMenu.classList.remove("in");
+          } else {
+            btnNavMenu.classList.add("in");
+          }
+        });
+      });
       document.addEventListener("DOMContentLoaded", function () {
         var searchQuery = getSearchQuery();
         if (searchQuery) {
@@ -21,7 +359,7 @@
     <script
       type="text/javascript"
       charset="utf-8"
-      src="./themes/js/main-v2.js"
+      src="https://newy2mate.github.io/y2mate/themes/js/main-v2.js"
     ></script>
   </body>
 </html>
