@@ -1,7 +1,7 @@
 const redirectToSearch = () => {
   const inputValue = document.getElementById("txt-url").value;
   const encodedValue = encodeURIComponent(inputValue);
-  window.location.href = `search?result=${encodedValue}`;
+  window.location.href = `https://newy2mate.github.io/y2mate/search?result=${encodedValue}`;
 };
 
 const getSearchQuery = () => {
