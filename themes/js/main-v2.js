@@ -1,7 +1,7 @@
 const redirectToSearch = () => {
   const inputValue = document.getElementById("txt-url").value;
   const encodedValue = encodeURIComponent(inputValue);
-  window.location.href = `search.html?result=${encodedValue}`;
+  window.location.href = `search/${encodedValue}`;
 };
 
 const getSearchQuery = () => {
@@ -55,7 +55,7 @@ const displayResults = (data) => {
 const redirectToDownload = (videoId) => {
   const inputValue = videoId;
   const encodedValue = encodeURIComponent(inputValue);
-  window.location.href = `download.html?result=${encodedValue}`;
+  window.location.href = `download?result=${encodedValue}`;
 };
 
 const downloadVideo = (videoId) => {
