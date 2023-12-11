@@ -12,15 +12,18 @@ const getSearchQuery = () => {
 
 const searchVideos = () => {
   const inputValue = document.getElementById("txt-url").value;
+  document.getElementById("loader").style.display = "inline";
 
   fetch(
     `https://me0xn4hy3i.execute-api.us-east-1.amazonaws.com/staging/api/resolve/resolveYoutubeSearch?search=${inputValue}`
   )
     .then((response) => response.json())
     .then((data) => {
+      document.getElementById("loader").style.display = "none";
       displayResults(data);
     })
     .catch((error) => {
+      document.getElementById("loader").style.display = "none";
       console.error("Error fetching data:", error);
     });
 };
